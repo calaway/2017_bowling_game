@@ -17,4 +17,16 @@ class GameTest < Minitest::Test
     assert_equal(0, @game.score, "game score wrong for 0 pins")
   end
 
+  def test_static_rolls_score_is_correct
+    (1..9).each do |pin_count|
+      (0..9).each do |frames|
+        @game.add_roll(pin_count)
+        @game.add_roll(0)
+      end
+      assert_equal(pin_count * 10, @game.score, "score is wrong first static test!")
+      @game.reset
+    end
+  end
+
+
 end
