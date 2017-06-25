@@ -28,5 +28,14 @@ class GameTest < Minitest::Test
     end
   end
 
-
+  def test_inverse_static_rolls_test
+    (0..9).each do |pin_count|
+      (0..9).each do |frames|
+        @game.add_roll(0)
+        @game.add_roll(pin_count)
+      end
+      assert_equal(pin_count * 10, @game.score, "score is wrong second static test")
+      @game.reset
+    end
+  end
 end
