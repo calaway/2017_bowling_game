@@ -38,4 +38,15 @@ class GameTest < Minitest::Test
       @game.reset
     end
   end
+
+  def test_various_non_strike_or_spare_rolls
+    (1..9).each do |pin_count|
+      (0..9).each do |frames|
+        @game.add_roll(pin_count)
+        @game.add_roll(9 - pin_count)
+      end
+      assert_equal(90, @game.score, "various non strike or spare tests failed")
+      @game.reset
+    end
+  end
 end
