@@ -19,17 +19,23 @@ and then checkout the next tag.  Here is the list of tags:
 
 v0.1 - Initial checkin - all gutter balls
 
-v0.2
+v0.2 - all static rolls 1
 
-v0.3
+v0.3 - all static rolls 2
 
-v0.4
+v0.4 - all static rolls 3
 
-v0.5
+v0.5 - single spare roll
 
-v0.6
+v0.6 - 9 spare rolls
 
-v1.0 - Game rules fully implemented
+v0.7 - all spare rolls
+
+v0.8 - one strike
+
+v0.9 - nine strikes
+
+v1.0 - all strikes
 
 With these tests in place you don't even need to know how to score bowling.  In case you're
 interested, here are the rules and an example:
