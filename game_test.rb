@@ -49,4 +49,17 @@ class GameTest < Minitest::Test
       @game.reset
     end
   end
+
+  def test_one_spare
+    @game.add_roll(5)
+    @game.add_roll(5)
+    @game.add_roll(5)
+    @game.add_roll(0)
+    (1..8).each do |roll|
+      @game.add_roll(0)
+      @game.add_roll(0)
+    end
+    assert_equal(20, @game.score, "simple spare and gutters wrong")
+  end
+
 end
