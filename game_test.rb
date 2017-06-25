@@ -94,4 +94,14 @@ class GameTest < Minitest::Test
     assert_equal(28, @game.score, "simple strike, 2 non-spare balls, and gutters wrong")
   end
 
+  def test_nine_strikes
+    (1..9).each do
+      @game.add_roll(10)
+    end
+    @game.add_roll(0)
+    @game.add_roll(0)
+
+    assert_equal(240, @game.score, "9 strikes, 2 gutter balls wrong")
+  end
+
 end
