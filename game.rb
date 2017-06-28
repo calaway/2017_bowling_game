@@ -14,7 +14,7 @@ class Game
 
   def score
     @extra_points = @score.map.with_index do |pin_count, index|
-      if (index == 0) || (index == 1) # cannot recieve extra points on first frame or after 20 rolls
+      if (index == 0) || (index == 1) # cannot recieve extra points on first frame
         0
       elsif ((4..19).include?(index)) && (@score[index - 2] == 10) && (@score[index - 4] == 10) # roll following two strikes
         pin_count * 2
